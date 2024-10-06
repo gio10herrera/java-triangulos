@@ -9,6 +9,14 @@ public class Triangles {
     public static void main(String[] args) {
         inputData();
         checkTriangleType();
+        calculateAnglesOfTheTriangle();
+    }
+
+    private static void inputData() {
+        a = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the length of side (a) of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
+        b = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the length of side (b) of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
+        c = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the length of side (c) of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
+        h = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the height of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
     }
 
     private static void checkTriangleType() {
@@ -21,10 +29,11 @@ public class Triangles {
         }
     }
 
-    private static void inputData() {
-        a = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the length of side (a) of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
-        b = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the length of side (b) of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
-        c = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the length of side (c) of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
-        h = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter the height of the triangle", "Triangle data", JOptionPane.INFORMATION_MESSAGE));
+    private static void calculateAnglesOfTheTriangle() {
+        switch (typeOfTriangle) {
+            case "equilateral triangle" -> angleA = 60;
+            case "isosceles triangle", "scalene triangle" -> lawOfCosines();
+            default -> JOptionPane.showMessageDialog(null, "Unknown triangle", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
