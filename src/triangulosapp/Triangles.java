@@ -1,6 +1,7 @@
 package triangulosapp;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 public class Triangles {
     static double a, b, c, h, angleA, areaTriangle;
@@ -49,5 +50,13 @@ public class Triangles {
 
     private static void showResults() {
         String result = "\t\t\t\tTRIANGULOS\n\nSide a: " + a + "\t\tSide b: " + b + "\t\tSide c: " + c + "\n\n\t\t\t\t\tHeight (h)\n\n\nThe triangle is: " + typeOfTriangle + "\nThe degree of angle A is: " + angleA + "\nThe area of the triangle is: " + areaTriangle;
+        //JTextArea Configuration
+        JTextArea textArea = new JTextArea();
+        textArea.setEditable(false);
+        textArea.setSize(720, 400);
+        textArea.setBorder(new EmptyBorder(5, 5, 5, 5));
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.setText(result);
     }
 }
