@@ -10,6 +10,7 @@ public class Triangles {
         inputData();
         checkTriangleType();
         calculateAnglesOfTheTriangle();
+        areaOfTheTriangle();
     }
 
     private static void inputData() {
@@ -39,5 +40,9 @@ public class Triangles {
 
     private static void lawOfCosines() {
         angleA = Math.toDegrees(Math.acos((Math.pow(a,2)-Math.pow(b,2)-Math.pow(c,2)) / (-2*b*c)));
+    }
+
+    private static void areaOfTheTriangle() {
+        areaTriangle = (b * h) / 2;
     }
 }
