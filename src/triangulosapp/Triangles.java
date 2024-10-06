@@ -3,7 +3,7 @@ package triangulosapp;
 import javax.swing.*;
 
 public class Triangles {
-    static double a, b, c, h, angleA, angleB, angleC, areaTriangle;
+    static double a, b, c, h, angleA, areaTriangle;
     static String typeOfTriangle;
 
     public static void main(String[] args) {
