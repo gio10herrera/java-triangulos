@@ -3,10 +3,22 @@ package triangulosapp;
 import javax.swing.*;
 
 public class Triangles {
-    static float a, b, c, h;
+    static float a, b, c, h, angleA, angleB, angleC, areaTriangle;
+    static String typeOfTriangle;
 
     public static void main(String[] args) {
         inputData();
+        checkTriangleType();
+    }
+
+    private static void checkTriangleType() {
+        if (a!=b && a!=c && b!=c){
+            typeOfTriangle = "scalene triangle";
+        } else if (a==b && a==c) {
+            typeOfTriangle = "equilateral triangle";
+        } else {
+            typeOfTriangle = "isosceles triangle";
+        }
     }
 
     private static void inputData() {
