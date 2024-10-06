@@ -58,5 +58,6 @@ public class Triangles {
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
         textArea.setText(result);
+        JOptionPane.showMessageDialog(null, textArea, "Triangles", JOptionPane.INFORMATION_MESSAGE);
     }
 }
