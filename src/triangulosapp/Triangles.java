@@ -11,6 +11,7 @@ public class Triangles {
         checkTriangleType();
         calculateAnglesOfTheTriangle();
         areaOfTheTriangle();
+        showResults();
     }
 
     private static void inputData() {
@@ -44,5 +45,9 @@ public class Triangles {
 
     private static void areaOfTheTriangle() {
         areaTriangle = (b * h) / 2;
+    }
+
+    private static void showResults() {
+        String result = "\t\t\t\tTRIANGULOS\n\nSide a: " + a + "\t\tSide b: " + b + "\t\tSide c: " + c + "\n\n\t\t\t\t\tHeight (h)\n\n\nThe triangle is: " + typeOfTriangle + "\nThe degree of angle A is: " + angleA + "\nThe area of the triangle is: " + areaTriangle;
     }
 }
